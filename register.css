@@ -10,18 +10,24 @@
 /* Body styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f3f3f3;
+    background: #F1FBF3;
     color: #333;
 }
 
 /* Container styles */
 .container {
-    max-width: 600px; /* Adjust container width */
-    margin: 0 auto;
+    max-width: 800px; /* Adjust container width */
+    margin: auto; /* Center horizontally */
     padding: 20px;
-    background-color: #fff;
+    background: #fff;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+
+    /* Flexbox for vertical centering */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh; /* Set container height to viewport height */
 }
 
 /* Form styles */
@@ -63,15 +69,15 @@ select {
 button {
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
-    color: #fff;
+    background-color: #42CE64;
+    color: #06190B;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #00c030;
 }
 
 #org-fields {
