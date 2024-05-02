@@ -14,6 +14,15 @@ body {
     color: #333;
 }
 
+.logo {
+    width: 500px; /* Adjust width as needed */
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 150px; /* Adjust the left position as needed */
+}
+
 /* Container styles */
 .container {
     max-width: 900px; /* Increased container width */
