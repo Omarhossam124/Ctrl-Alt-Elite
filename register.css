@@ -67,13 +67,15 @@ select {
 }
 
 button {
-    width: 100%;
+    width: 50%;
     padding: 10px;
     background-color: #42CE64;
     color: #06190B;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    margin: auto; /* Center horizontally */
+    display: block; /* Ensures button takes up entire width */
 }
 
 button:hover {
@@ -86,4 +88,29 @@ button:hover {
 
 #organization:checked ~ #org-fields {
     display: block;
+}
+
+.login-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Adjust margin as needed */
+}
+
+.login-link p {
+    margin-right: 10px; /* Adjust spacing between text and button */
+}
+
+.login-link button {
+    width: 25%; /* Fixed width */
+    padding: 5px 10px; /* Adjust padding as needed */
+    font-size: 14px; /* Adjust font size as needed */
+    background-color: #8EE1E0;
+    color: #06190B;
+    margin-left: 5px; /* Adjust margin to move the button closer to the paragraph */
+}
+
+
+.login-link button:hover {
+    background-color: #0056b3;
 }
