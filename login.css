@@ -34,6 +34,9 @@ body {
     right: 150px; /* Positioned on the right with some margin */
     top: 50%; /* Center vertically */
     transform: translateY(-50%);
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
 }
 
 /* Form styles */
@@ -79,7 +82,7 @@ button:hover {
     color: #06190B;
     width: calc(100% - 50px);
     display: inline-block;
-    
+    align-self: center;
 }
 
 #register-btn:hover {
