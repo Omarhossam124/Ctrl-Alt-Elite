@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Register</h2>
+        <form id="registration-form">
+            <div class="form-group">
+                <label for="firstname">First Name</label>
+                <input type="text" id="firstname" name="firstname" required>
+            </div>
+            <div class="form-group">
+                <label for="lastname">Last Name</label>
+                <input type="text" id="lastname" name="lastname" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="contact">Contact Number</label>
+                <input type="tel" id="contact" name="contact" required>
+            </div>
+            <div id="org-fields" style="display: none;">
+                <div class="form-group">
+                    <label for="orgname">Organization Name</label>
+                    <input type="text" id="orgname" name="orgname">
+                </div>
+                <div class="form-group">
+                    <label for="orgtype">Organization Type</label>
+                    <input type="text" id="orgtype" name="orgtype">
+                </div>
+            </div>
+            <div class="form-group radio-group">
+                <span>Register as a:</span>
+                <input type="radio" id="donor" name="usertype" value="donor" checked>
+                <label for="donor">Donor</label>
+                <input type="radio" id="organization" name="usertype" value="organization">
+                <label for="organization">Organization</label>
+            </div>
+            <div class="form-group">
+                <label for="document">Upload Verification Document</label>
+                <input type="file" id="document" name="document">
+            </div>
+            <button type="submit">Register</button>
+            <div class="login-link">
+                <p>Already have an account?</p>
+                <button  id="login-btn">Login</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const donorRadio = document.getElementById('donor');
+            const orgRadio = document.getElementById('organization');
+            const orgFields = document.getElementById('org-fields');
+            const registerButton = document.querySelector('button[type="submit"]');
+            const loginButton = document.getElementById('login-btn'); // Select the login button
+            const form = document.getElementById('registration-form');
+            const errorText = document.createElement('p');
+            errorText.textContent = 'You must fill in all credentials before proceeding';
+            errorText.style.color = 'red';
+            errorText.style.display = 'none';
+    
+            // Function to toggle visibility of additional organization fields
+            function toggleOrgFields() {
+                orgFields.style.display = orgRadio.checked ? 'block' : 'none';
+            }
+    
+            // Initially hide additional organization fields
+            toggleOrgFields();
+    
+            // Add event listeners to radio buttons to toggle organization fields
+            donorRadio.addEventListener('change', toggleOrgFields);
+            orgRadio.addEventListener('change', toggleOrgFields);
+    
+            // Add event listener to register button for redirection
+            registerButton.addEventListener('click', function(event) {
+                // Prevent form submission
+                event.preventDefault();
+    
+                // Check if all required fields are filled
+                const requiredFields = form.querySelectorAll('input[required], select[required]');
+                let isValid = true;
+    
+                requiredFields.forEach(field => {
+                    if (!field.value.trim()) {
+                        isValid = false;
+                    }
+                });
+    
+                // Display error message if any required field is empty
+                if (!isValid) {
+                    errorText.style.display = 'block';
+                    return;
+                }
+    
+                // If all required fields are filled, proceed with registration
+                window.location.href = 'login.html';
+            });
+    
+            // Add event listener to login button for redirection
+            loginButton.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent default button behavior
+                window.location.href = 'login.html'; // Redirect to login page
+            });
+    
+            // Append error text to container
+            form.appendChild(errorText);
+        });
+    </script>
+    
+    
+</body>
+</html>
