@@ -16,45 +16,55 @@
 
     </head>
 
-    <body style="background-color: var(--background);"> 
-        <main>  
-          <h3 class="HeadingClass">View organizations</h3>
+    <body style="background-color: var(--background);">
+  <main>
+    <h3 class="HeadingClass">View organizations</h3>
 
-          <div class="row justify-content-center" >
-            <div class="col-7">
-              <table class="table table-sm table-bordered" style="background-color: var(--primary)" id="requestsTable">
-                <thead>
-                  <tr>
-                    <th scope="col">Item</th>
-                    <th scope="col">Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                 
+    <div class="row justify-content-around">  <div class="col-6">  <table class="table table-sm table-bordered" style="background-color: var(--primary)" id="requestsTable">
+          <thead>
+            <h3 class="SubHeadingClass">Organizations requests</h3>
+            <tr>
+              <th scope="col" style="width: 100px;">Request ID</th>
+              <th scope="col" style="width: 200px;">Name</th>
+              <th scope="col" style="width: 300px;">Details</th>
+              <th scope="col" style="width: 200px;">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            </tbody>
+        </table>
+      </div>
+
+      <div class="col-6">  <div class="row">  <div class="col-6">  <table class="table table-sm table-bordered" style="background-color: var(--secondary)" id="acceptedTable">
+              <thead>
+                <h3 class="SubHeadingClass">Accepted organizations</h3>
+                <tr>
+                  <th scope="col" style="width: 150px;">Request ID</th>
+                  <th scope="col" style="width: 300px;">Name</th>
+                  <th scope="col" style="width: 150px;">Undo</th>
+                </tr>
+              </thead>
+              <tbody>
                 </tbody>
-              </table>
-
-              <table class="table table-sm table-bordered" style="background-color: var(--primary)" id="acceptedTable">
-                <thead>
-                  <tr>
-                    <th>Request ID</th>
-                      <th>Details</th>
-                    </tr>
-                  </thead>
-                  <tbody></tbody>
-                </table>
-            
-                <table class="table table-sm table-bordered" style="background-color: var(--primary)" id="rejectedTable">
-                  <thead>
-                    <tr>
-                      <th>Request ID</th>
-                        <th>Details</th>
-                      </tr>
-                    </thead>
-                    <tbody></tbody>
-                  </table>      
-            </div>
+            </table>
           </div>
+
+          <div class="col-6">  <table class="table table-sm table-bordered" style="background-color: var(--accent)" id="rejectedTable">
+              <thead>
+                <h3 class="SubHeadingClass">Rejected organizations</h3>
+                <tr>
+                  <th scope="col" style="width: 150px;">Request ID</th>
+                  <th scope="col" style="width: 300px;">Name</th>
+                  <th scope="col" style="width: 150px;">Undo</th>
+                </tr>
+              </thead>
+              <tbody>
+                </tbody>
+            </table>
+          </div>
+          </div>
+      </div>
+    </div>
       
           
               
@@ -77,5 +87,6 @@
         <script src="./organization_request.js"></script>  <script> populateRequestsTable(); </script>
     </body>
 </html>
+
 
 
