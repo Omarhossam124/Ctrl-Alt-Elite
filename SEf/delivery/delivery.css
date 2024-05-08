@@ -1,0 +1,61 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f1fbf3; /* background */
+  color: #06190b; /* text */
+}
+
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff; /* background */
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+h3
+{
+
+  font-size: smaller;
+}
+.section {
+  margin-bottom: 20px;
+}
+
+h1, h2 h3 {
+  color: #06190b; /* text */
+
+}
+
+button {
+  background-color: #42ce64; /* primary */
+  color: #fff; /* text */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+button:hover {
+  background-color: #67b5d7; /* accent */
+}
+
+input[type="datetime-local"],
+input[type="checkbox"] {
+  margin-top: 5px;
+  padding: 5px;
+}
+.required {
+  color: red;
+}
+.error-message {
+  color: red;
+}
+/* Hide the checkbox visually */
+#notification {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
