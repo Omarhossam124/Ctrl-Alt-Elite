@@ -141,3 +141,42 @@ document.querySelector('.edit-contact-btn').addEventListener('click', function()
         input.parentNode.replaceChild(newSpan, input);
     });
 });
+
+
+// Wait for the DOM content to be loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Retrieve user's email and password from the login session (assuming they are stored in sessionStorage)
+    const userEmail = sessionStorage.getItem('userEmail');
+    const userPassword = sessionStorage.getItem('userPassword');
+
+    // Retrieve user data from local storage based on email and password
+    const userData = getUserData(userEmail, userPassword);
+
+    // Populate profile page fields with retrieved user data
+    populateProfileFields(userData);
+});
+
+// Wait for the DOM content to be loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Retrieve user's email and password from sessionStorage
+    const userEmail = sessionStorage.getItem('userEmail');
+    const userPassword = sessionStorage.getItem('userPassword');
+
+    // Check if userEmail and userPassword are retrieved correctly
+    console.log('User Email:', userEmail);
+    console.log('User Password:', userPassword);
+
+    // Continue with other operations like retrieving user data from localStorage and populating profile fields
+});
+
+// Function to populate profile page fields with user data
+function populateProfileFields(userData) {
+    if (userData) {
+        // Populate profile fields with user data
+        document.getElementById('user-email').textContent = userData.email;
+        // Display other user information as needed
+    } else {
+        // Handle case where no user data is found
+        console.error('User data not found');
+    }
+}

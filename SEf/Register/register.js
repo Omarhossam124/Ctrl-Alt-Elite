@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem('userData', JSON.stringify(userData));
 
         // Redirect to login page
-        window.location.href = 'login.html';
+        window.location.href = '../Login/login.html';
     });
 
     // Add event listener to login button for redirection
@@ -61,3 +61,40 @@ document.addEventListener('DOMContentLoaded', function() {
     // Append error text to container
     form.appendChild(errorText);
 });
+
+
+// Function to retrieve all user registration data
+function getUserData() {
+    // Retrieve all user input data from the registration form
+    const firstName = document.getElementById('firstname').value;
+    const lastName = document.getElementById('lastname').value;
+    const gender = document.getElementById('gender').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const contact = document.getElementById('contact').value;
+    const address = document.getElementById('address').value;
+    const governorate = document.getElementById('governorate').value;
+    const userType = document.querySelector('input[name="usertype"]:checked').value;
+    const organizationName = document.getElementById('orgname').value;
+    const organizationType = document.getElementById('orgtype').value;
+    // Add more fields as needed
+
+    // Construct and return user data object
+    return {
+        firstName,
+        lastName,
+        gender,
+        email,
+        password,
+        contact,
+        address,
+        governorate,
+        userType,
+        organizationName,
+        organizationType
+        // Add more fields as needed
+    };
+}
+
+// After storing user data in localStorage in the registration script
+console.log('User data stored in localStorage:', localStorage.getItem('userData'));
