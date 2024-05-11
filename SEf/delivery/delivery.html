@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donor Donation Pickup</title>
+  <link rel="stylesheet" href="delivery.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Donor Donation Pickup</h1>
+    
+    <!-- Transportation Selection -->
+    <div class="section">
+      <h2>Transportation Selection</h2>
+      <label for="transportation">Choose transportation type:</label>
+      <select id="transportation" required>
+          <option value="">Select...</option>
+          <option value="truck">Truck</option>
+          <option value="car">Car</option>
+          <option value="motorcycle">Motorcycle</option>
+      </select><span class="required">*</span>
+    </div>
+
+    <!-- Schedule Selection for Donation Pickup -->
+    <div class="section">
+      <h2>Schedule Selection for Donation Pickup</h2>
+      <label for="pickup-time">Select pickup time:</label>
+      <input type="datetime-local" id="pickup-time" required><span class="required">*</span>
+    </div>
+
+    <!-- ETA Display -->
+    <div class="section">
+      <h2>Estimated Time of Arrival</h2>
+      <p id="eta">ETA: <span id="eta-time"></span></p>
+    </div>
+
+    <!-- Notification for Driver Arrival -->
+    <div class="section">
+      <h3>you will receive notification when driver arrives </h2>
+      <label for="notification"> </label>
+      <input type="checkbox" id="notification" checked >
+    </div>
+
+    <!-- Error Message -->
+    <p id="error-message" class="error-message"></p>
+
+    <!-- Submit Button -->
+    <button id="submit">Schedule Pickup</button>
+
+    
+    <button id="back">Back</button>
+  </div>
+  <script src="delivery.js"></script>
+</body>
+</html>
