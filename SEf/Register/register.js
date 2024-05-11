@@ -62,39 +62,133 @@ document.addEventListener('DOMContentLoaded', function() {
     form.appendChild(errorText);
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    var donorRadioButton = document.getElementById("donor");
+    var organizationRadioButton = document.getElementById("organization");
+    var donorTypeDropdown = document.getElementById("donorTypeDropdown");
 
-// Function to retrieve all user registration data
-function getUserData() {
-    // Retrieve all user input data from the registration form
-    const firstName = document.getElementById('firstname').value;
-    const lastName = document.getElementById('lastname').value;
-    const gender = document.getElementById('gender').value;
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-    const contact = document.getElementById('contact').value;
-    const address = document.getElementById('address').value;
-    const governorate = document.getElementById('governorate').value;
-    const userType = document.querySelector('input[name="usertype"]:checked').value;
-    const organizationName = document.getElementById('orgname').value;
-    const organizationType = document.getElementById('orgtype').value;
-    // Add more fields as needed
+    // Initially hide the dropdown
+    donorTypeDropdown.style.display = "none";
 
-    // Construct and return user data object
-    return {
-        firstName,
-        lastName,
-        gender,
-        email,
-        password,
-        contact,
-        address,
-        governorate,
-        userType,
-        organizationName,
-        organizationType
-        // Add more fields as needed
-    };
-}
+    donorRadioButton.addEventListener("click", function() {
+        // Toggle the visibility of the dropdown
+        donorTypeDropdown.style.display = donorRadioButton.checked ? "block" : "none";
+    });
 
-// After storing user data in localStorage in the registration script
-console.log('User data stored in localStorage:', localStorage.getItem('userData'));
+    organizationRadioButton.addEventListener("click", function() {
+        // Hide the dropdown when the organization radio button is clicked
+        donorTypeDropdown.style.display = "none";
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    var donorRadioButton = document.getElementById("donor");
+    var organizationRadioButton = document.getElementById("organization");
+    var donorTypeDropdown = document.getElementById("donorType");
+    var documentUpload = document.getElementById("document").closest('.form-group');
+
+    // Initially hide the document upload component
+    documentUpload.style.display = "none";
+
+    function updateDocumentVisibility() {
+        if (organizationRadioButton.checked || (donorRadioButton.checked && (donorTypeDropdown.value === "teacher" || donorTypeDropdown.value === "doctor"))) {
+            documentUpload.style.display = "block";
+        } else {
+            documentUpload.style.display = "none";
+        }
+    }
+
+    donorRadioButton.addEventListener("click", updateDocumentVisibility);
+    organizationRadioButton.addEventListener("click", updateDocumentVisibility);
+    donorTypeDropdown.addEventListener("change", updateDocumentVisibility);
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    var organizationRadioButton = document.getElementById("organization");
+    var mapContainer = document.getElementById("map");
+    var map;
+    var marker;
+
+    organizationRadioButton.addEventListener("change", function() {
+        if (organizationRadioButton.checked) {
+            // Initialize the map
+            map = new google.maps.Map(mapContainer, {
+                center: {lat: YOUR_LATITUDE, lng: YOUR_LONGITUDE}, // Set the initial center of the map
+                zoom: 15 // Set the initial zoom level
+            });
+
+            // Set the marker at the organization location
+            marker = new google.maps.Marker({
+                position: {lat: YOUR_LATITUDE, lng: YOUR_LONGITUDE}, // Set the location of the marker
+                map: map, // Set the map to display the marker
+                title: 'Organization Location' // Set the title of the marker
+            });
+        } else {
+            // Remove the map and marker when the organization radio button is deselected
+            map = null;
+            marker = null;
+            mapContainer.innerHTML = ''; // Remove the map container content
+        }
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    var donorRadioButton = document.getElementById("donor");
+    var organizationRadioButton = document.getElementById("organization");
+    var donorTypeDropdown = document.getElementById("donorType");
+    var clinicAddressField = document.getElementById("clinicAddress");
+    var clinicAreaField = document.getElementById("clinicArea");
+    var clinicGovernorateField = document.getElementById("clinicGovernorate");
+    var addressFormGroup = document.getElementById("addressFormGroup");
+    var governorateFormGroup = document.getElementById("governorateFormGroup");
+
+    // Initially hide the clinic fields
+    var doctorFields = document.getElementById("doctorFields");
+    doctorFields.style.display = "none";
+
+    // Event listener for changes in the dropdown selection
+    donorTypeDropdown.addEventListener("change", function() {
+        if (donorTypeDropdown.value === "doctor") {
+            doctorFields.style.display = "block"; // Show the doctor fields
+            // Remove the address and governorate sections from the DOM
+            addressFormGroup.remove();
+            governorateFormGroup.remove();
+        } else {
+            doctorFields.style.display = "none"; // Hide the doctor fields
+            // Add the address and governorate sections back to the DOM
+            document.getElementById("registration-form").appendChild(addressFormGroup);
+            document.getElementById("registration-form").appendChild(governorateFormGroup);
+        }
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    var donorRadioButton = document.getElementById("donor");
+    var donorTypeDropdown = document.getElementById("donorType");
+    var specialityField = document.getElementById("speciality");
+    var probonoField = document.getElementById("probono");
+
+    // Initially hide the donor fields
+    var donorFields = document.getElementById("donorFields");
+    donorFields.style.display = "none";
+
+    // Event listener for changes in the dropdown selection
+    donorTypeDropdown.addEventListener("change", function() {
+        if (donorRadioButton.checked && donorTypeDropdown.value === "doctor") {
+            donorFields.style.display = "block"; // Show the donor fields if donor option is selected and doctor is chosen
+        } else {
+            donorFields.style.display = "none"; // Hide the donor fields for other options
+        }
+    });
+
+    // Event listener for changes in the radio button selection
+    donorRadioButton.addEventListener("change", function() {
+        if (donorRadioButton.checked) {
+            if (donorTypeDropdown.value === "doctor") {
+                donorFields.style.display = "block"; // Show the donor fields if donor option is selected and doctor is chosen
+            } else {
+                donorFields.style.display = "none"; // Hide the donor fields if not doctor
+            }
+        }
+    });
+});
