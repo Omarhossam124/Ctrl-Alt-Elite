@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+body {
+    font-family: "Oswald", sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    height: 65px;
+    align-items: center;
+    background-color: #05445E;
+    color: #D4F1F4;
+    border-radius: 10px;
+}
+
+.header_title{
+    margin-left: 15px;
+}
+
+.btn-danger{
+    margin-right: 20px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 600px;
+    margin-top: 50px;
+    box-shadow: 5px 5px 3px 0 rgba(0,0,0,.1), 0 5px 10px 0 rgba(0,0,0,.06);
+    border-radius:40px ;
+}
+
+.title_and_btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.two_btn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#primary{
+    background-color: #05445E;
+    color: #D4F1F4; 
+}
+
+.title{
+    display: flex;
+    flex-direction: row;
+}
+
+#name{
+    display: flex;
+    align-items: center;
+}
+
+.info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.extras{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 10px;
+    margin-top: 30px;
+}
+
+.end{
+    display: flex;
+    flex-direction: row;
+    justify-content:end;
+    align-items: center;
+    
+}
+
+.checked {
+    color: orange;
+}
+
