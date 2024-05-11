@@ -6,6 +6,9 @@
     <title>Create Donation Post</title>
     <!-- Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-nQP/+fUpWT0iXHd1Qi7gl0eGGpiDFNdn4Zy3QZVqMVQv2C1aWOAdfS+zCKV/ZpZREZ8A/PRRj3aXVdWQ/1NirA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="styles.css" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -18,8 +21,23 @@
                 <li class="nav-item">
                     <a class="nav-link" href="index.html">Home</a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="create_post.html">Create Post</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="manage_requests.html">Manage Requests</a>
+                </li>
+            </ul>
+            <!-- Bell icon for notifications -->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown navbar-bell">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge badge-danger badge-notification">1</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-notification" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">New message</a>
+                    </div>
                 </li>
             </ul>
         </div>

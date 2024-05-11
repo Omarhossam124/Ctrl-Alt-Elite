@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Organization Home</title>
+    <title>Donation Post</title>
     <!-- Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome CSS for icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
     <link href="styles.css" rel="stylesheet">
+    <style>
+        .product-img {
+            max-height: 300px;
+            object-fit: cover;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -43,50 +46,24 @@
             </ul>
         </div>
     </nav>
-    <div class="container mt-4">
-        <h1>Welcome to Your Organization</h1>
-        <p>Manage your donation posts here.</p>
 
-        <!-- Donation Posts -->
+    <div class="container mt-4">
         <div class="row">
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Sample Donation Post 1</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <a href="#" class="btn btn-primary">View Details</a>
-                    </div>
-                </div>
+            <div class="col-md-6">
+                <img src="https://via.placeholder.com/300" class="img-fluid product-img" alt="Sample Product">
             </div>
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Sample Donation Post 2</h5>
-                        <p class="card-text">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <a href="#" class="btn btn-primary">View Details</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Sample Donation Post 3</h5>
-                        <p class="card-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        <a href="#" class="btn btn-primary">View Details</a>
-                    </div>
-                </div>
+            <div class="col-md-6">
+                <h1>Sample Product</h1>
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <a href="#" class="btn btn-danger">Delete Post</a>
             </div>
         </div>
     </div>
-    </div>
+
     <!-- Bootstrap JS and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!-- Custom JS -->
-    <script src="scripts.js"></script>
 </body>
 </html>
