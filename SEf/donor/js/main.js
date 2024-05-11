@@ -421,26 +421,4 @@ function search() {
 	  }
 	}
   }
-  document.addEventListener('DOMContentLoaded', function() {
-    const categoryButtons = document.querySelectorAll('.category-btn');
-    const donationRequests = document.getElementById('donationRequests');
 
-    categoryButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        const category = button.dataset.category;
-        filterByCategory(category);
-      });
-    });
-
-    function filterByCategory(category) {
-      const allPosts = donationRequests.querySelectorAll('.cause');
-      allPosts.forEach(post => {
-        const postCategory = post.querySelector('.badge').textContent.trim();
-        if (category === 'All' || postCategory === category) {
-          post.style.display = 'block';
-        } else {
-          post.style.display = 'none';
-        }
-      });
-    }
-  });
