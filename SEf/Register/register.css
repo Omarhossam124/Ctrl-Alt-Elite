@@ -129,7 +129,38 @@ button:hover {
     margin-left: 5px; /* Adjust margin to move the button closer to the paragraph */
 }
 
-
 .login-link button:hover {
     background-color: #0056b3;
+}
+
+#donorTypeDropdown {
+    margin-bottom: 20px; /* Adjust the value as needed */
+}
+
+#map {
+    width: 100%; /* Set the width of the map container */
+    height: 400px; /* Set the height of the map container */
+    border: 1px solid #ccc; /* Add a border to the map container */
+    border-radius: 4px; /* Add border radius to the map container */
+    margin-top: 20px; /* Add some top margin to create space between the map and other elements */
+}
+
+#doctorFields {
+    margin-top: 20px; /* Add some top margin for spacing */
+}
+
+#doctorFields .form-group {
+    margin-bottom: 15px; /* Add some bottom margin for spacing between fields */
+}
+
+#doctorFields label {
+    font-weight: bold; /* Make labels bold */
+}
+
+#doctorFields input[type="text"] {
+    width: 100%; /* Make input fields take up full width */
+    padding: 10px; /* Add padding */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 4px; /* Add border radius */
+    box-sizing: border-box; /* Ensure padding and border are included in width calculation */
 }
