@@ -10,7 +10,7 @@
 /* Body styles */
 body {
     font-family: Arial, sans-serif;
-    background: #F1FBF3;
+    background: #364d59;
     color: #333;
 }
 
@@ -86,10 +86,10 @@ input[type="file"]:focus {
 
 
 button {
-    width: 50%;
+    width: 30%;
     padding: 10px;
-    background-color: #42CE64;
-    color: #06190B;
+    background-color: #00a651;
+    color: #000;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -99,6 +99,7 @@ button {
 
 button:hover {
     background-color: #00c030;
+    color: #fff
 }
 
 #org-fields {
@@ -121,16 +122,17 @@ button:hover {
 }
 
 .login-link button {
-    width: 25%; /* Fixed width */
+    width: 18%; /* Fixed width */
     padding: 5px 10px; /* Adjust padding as needed */
     font-size: 14px; /* Adjust font size as needed */
-    background-color: #8EE1E0;
-    color: #06190B;
+    background-color: #167aaf;
+    color: #000;
     margin-left: 5px; /* Adjust margin to move the button closer to the paragraph */
 }
 
 .login-link button:hover {
-    background-color: #0056b3;
+    background-color: #00a6ff;
+    color: #fff
 }
 
 #donorTypeDropdown {
