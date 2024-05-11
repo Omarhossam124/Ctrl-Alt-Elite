@@ -10,10 +10,9 @@ const requests = [
 
 const acceptedRequests = [];
 const rejectedRequests = [];
-//const returnedRequests = [];
 
 // Function to populate the requests table
-function populateRequestsTable() {
+function buildMainRequestsTable() {
   const tableBody = document.getElementById("requestsTable").getElementsByTagName("tbody")[0];
   tableBody.innerHTML = ""; // Clear existing content
 
@@ -49,40 +48,10 @@ function populateRequestsTable() {
     tableBody.appendChild(tableRow);
   }
 }
-
-function populateAcceptedRequestsTable() {
-  const tableBody = document.getElementById("acceptedTable").getElementsByTagName("tbody")[0];
-  tableBody.innerHTML = "";  
-  for (const request of acceptedRequests) {
-    const tableRow = document.createElement("tr");
-    const idCell = document.createElement("td");
-    const nameCell = document.createElement("td");
-    const undoCell = document.createElement("td");
-
-    idCell.textContent = request.id;
-    //idCell.style.backgroundColor = "lightblue";
-    nameCell.textContent = request.name;
-    //nameCell.style.backgroundColor = "green";
-    const undoButton = document.createElement("button");
-    undoButton.classList.add("btn", "btn-danger", "btn-sm");
-    undoButton.textContent = "Undo";
-    undoButton.addEventListener("click", () => handleUndoRequest(request.id));
-    undoCell.appendChild(undoButton)
-
-    
-    tableRow.appendChild(idCell);
-    tableRow.appendChild(nameCell);
-    tableRow.appendChild(undoCell);
-
-    tableBody.appendChild(tableRow);
-  }
-}
-
-
-function populateRejectedRequestsTable() {
-  const tableBody = document.getElementById("rejectedTable").getElementsByTagName("tbody")[0];
+function buildRequestsTable(tableId, requests, isAccepted) {
+  const tableBody = document.getElementById(tableId).getElementsByTagName("tbody")[0];
   tableBody.innerHTML = "";   
-  for (const request of rejectedRequests) {
+  for (const request of requests) {
     const tableRow = document.createElement("tr");
     const idCell = document.createElement("td");
     idCell.textContent = request.id;
@@ -96,7 +65,7 @@ function populateRejectedRequestsTable() {
    const undoButton = document.createElement("button");
     undoButton.classList.add("btn", "btn-danger", "btn-sm");
     undoButton.textContent = "Undo";
-    undoButton.addEventListener("click", () => handleUndoRequest(request.id));
+    undoButton.addEventListener("click", () => handleUndoRequest(request.id, isAccepted));
     undoCell.appendChild(undoButton)
 
 
@@ -107,58 +76,37 @@ function populateRejectedRequestsTable() {
   }
 }
 
-// Function to handle accept request (update UI and data)
-// function handleAcceptRequest(requestId) {
-//   const acceptedRequest = requests.find(request => request.id === requestId);
-//   requests.pop(acceptedRequest);
-  
-//   acceptedRequests.push(acceptedRequest);
-//   populateRequestsTable();
-
-//   populateAcceptedRequestsTable();
-  
-// }  
 function handleAcceptRequest(requestId) {
   const acceptedRequest = requests.find(request => request.id === requestId);
   const requestIndex = requests.indexOf(acceptedRequest);  // Find index of request
   requests.splice(requestIndex, 1);  // Remove using index for efficiency
 
   acceptedRequests.push(acceptedRequest);
-  populateRequestsTable();  // Update main table first
-  populateAcceptedRequestsTable();
+  buildMainRequestsTable();  // Update main table first
+  buildRequestsTable("acceptedTable", acceptedRequests, true)
 }
 
-// function handleRejectRequest(requestId) {
-//   const rejectedReuest = requests.find(request => request.id === requestId);
-//   requests.pop(rejectedReuest);
-//   populateRequestsTable();
-
-//   rejectedRequests.push(rejectedReuest);
-//   populateRejectedRequestsTable();
-// }
 function handleRejectRequest(requestId) {
   const rejectedReuest = requests.find(request => request.id === requestId);
   const requestIndex = requests.indexOf(rejectedReuest);  // Find index of request
   requests.splice(requestIndex, 1);  // Remove using index for efficiency
-
-  
   rejectedRequests.push(rejectedReuest);
-  populateRequestsTable();
-  populateRejectedRequestsTable();
+  buildMainRequestsTable();
+  buildRequestsTable("rejectedTable", rejectedRequests, false)
+
 }
-
-
 //handleUndoRequest
-
-function handleUndoRequest(requestId) {
-  const returnedReuest = rejectedRequests.find(request => request.id === requestId);
-  //const requestIndex = rejectedRequests.indexOf(returnedReuest);  // Find index of request
-  //requests.splice(requestIndex, 1);  // Remove using index for efficiency
-
-  rejectedRequests.pop(returnedReuest);
+function handleUndoRequest(requestId, isAccepted) {
+  var returnedReuest;
+  if(isAccepted){
+    returnedReuest = acceptedRequests.find(request => request.id === requestId);
+    acceptedRequests.pop(returnedReuest);
+    buildRequestsTable("acceptedTable", acceptedRequests, true)
+  }else{
+    returnedReuest = rejectedRequests.find(request => request.id === requestId);
+    rejectedRequests.pop(returnedReuest);
+    buildRequestsTable("rejectedTable", rejectedRequests, false)
+  }
   requests.push(returnedReuest);
-  
-   populateRequestsTable();
-   populateRejectedRequestsTable();
-   // the problem is in calling these methods
+  buildMainRequestsTable();
 }
