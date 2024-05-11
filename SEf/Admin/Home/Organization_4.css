@@ -15,7 +15,11 @@ header{
 }
 
 .header_title{
-    margin-left: 15px;
+    margin-left: -500px;
+}
+
+#back{
+    color:#D4F1F4 ;
 }
 
 .btn-danger{
