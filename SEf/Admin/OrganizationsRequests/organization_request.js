@@ -1,12 +1,4 @@
-const requests = [
-  { id: 1, name: "mersal" , details: "spreading happines since 2000" },
-  { id: 2, name: "masr elkheer" , details: "masr dayman feeha kheer" },
-  { id: 3, name: "basma" , details: "ersem basma" },
-  { id: 4, name: "youturn" , details: "take the right youturn" },
-  { id: 5, name: "hedaya" , details: "since 1999" },
-  { id: 6, name: "maadians" , details: "pleasing every maadian" },
-  { id: 7, name: "easylearn" , details: "trying to let you learn easily" },
-];
+const requests =JSON.parse(localStorage.getItem("requests"));
 
 const acceptedRequests = [];
 const rejectedRequests = [];
@@ -15,17 +7,23 @@ const rejectedRequests = [];
 function buildMainRequestsTable() {
   const tableBody = document.getElementById("requestsTable").getElementsByTagName("tbody")[0];
   tableBody.innerHTML = ""; // Clear existing content
-
+  requests.sort((a, b) => a.id - b.id);
   for (const request of requests) {
     const tableRow = document.createElement("tr");
     const idCell = document.createElement("td");
     const nameCell = document.createElement("td");
     const actionCell = document.createElement("td");
-    const detailsCell = document.createElement("td");
 
     idCell.textContent = request.id;
     nameCell.textContent = request.name;
-    detailsCell.textContent=request.details;
+
+    const DetButton = document.createElement("button");
+    DetButton.classList.add("btn", "btn-primary", "btn-sm");
+    DetButton.setAttribute("data-bs-toggle","modal");
+    DetButton.setAttribute("data-bs-target","#exampleModal");
+    DetButton.addEventListener("click", () => openPopupHandler(request));
+
+    DetButton.textContent = "Details";
 
     const acceptButton = document.createElement("button");
     acceptButton.classList.add("btn", "btn-primary", "btn-sm");
@@ -42,7 +40,7 @@ function buildMainRequestsTable() {
 
     tableRow.appendChild(idCell);
     tableRow.appendChild(nameCell);
-    tableRow.appendChild(detailsCell);
+    tableRow.appendChild(DetButton);
     tableRow.appendChild(actionCell);
 
     tableBody.appendChild(tableRow);
@@ -97,16 +95,26 @@ function handleRejectRequest(requestId) {
 }
 //handleUndoRequest
 function handleUndoRequest(requestId, isAccepted) {
-  var returnedReuest;
+  var returnedRequest;
   if(isAccepted){
-    returnedReuest = acceptedRequests.find(request => request.id === requestId);
-    acceptedRequests.pop(returnedReuest);
+    returnedRequest = acceptedRequests.find(request => request.id === requestId);
+    const requestIndex = acceptedRequests.indexOf(returnedRequest);  
+    acceptedRequests.splice(requestIndex, 1);  
     buildRequestsTable("acceptedTable", acceptedRequests, true)
   }else{
-    returnedReuest = rejectedRequests.find(request => request.id === requestId);
-    rejectedRequests.pop(returnedReuest);
+    returnedRequest = rejectedRequests.find(request => request.id === requestId);
+    const requestIndex = rejectedRequests.indexOf(returnedRequest);  
+    rejectedRequests.splice(requestIndex, 1);  
     buildRequestsTable("rejectedTable", rejectedRequests, false)
   }
-  requests.push(returnedReuest);
+  requests.push(returnedRequest);
   buildMainRequestsTable();
+}
+
+function openPopupHandler(request){
+console.log(request);
+var orgName = document.getElementById("OrgName")
+var location = document.getElementById("location")
+location.textContent = request.location;
+orgName.textContent = request.name;
 }
