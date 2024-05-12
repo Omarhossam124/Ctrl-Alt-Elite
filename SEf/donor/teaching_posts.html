@@ -133,43 +133,100 @@
                     <div class="card-body">
                     <form>
                       <label class="form-check">
-                        <input class="form-check-input" type="checkbox" value=""onclick="addFilter({type_food:'fruits'});populateDiv('fruits')">
+                        <input class="form-check-input" type="checkbox" value=""onclick="addFilter({subject:'subject 1'});populateDiv('subject 1')">
                         <span class="form-check-label">
-                          fruits
+                          subject 1
                         </span>
                       </label> <!-- form-check.// -->
                       <label class="form-check">
-                        <input class="form-check-input" type="checkbox" value=""onclick="addFilter({type_food:'vegetables'});populateDiv('vegetables')">
+                        <input class="form-check-input" type="checkbox" value=""onclick="addFilter({subject:'subject 2'});populateDiv('subject 2')">
                         <span class="form-check-label">
-                          vegtables
+                          subject 2
                         </span>
                       </label>  <!-- form-check.// -->
                       <label class="form-check">
-                        <input class="form-check-input" type="checkbox" value=""onclick="addFilter({type_food:'canned foods'});populateDiv('canned foods')">
+                        <input class="form-check-input" type="checkbox" value=""onclick="addFilter({subject:'subject 3'});populateDiv('subject 3')">
                         <span class="form-check-label">
-                          canned foods
+                          subject 3
                         </span>
                       </label>  <!-- form-check.// -->
-                      <label class="form-check">
-                        <input class="form-check-input" type="checkbox" value=""onclick="addFilter({type_food:'fresh meals'});populateDiv('fresh meals')">
-                        <span class="form-check-label">
-                          fresh meals
-                        </span>
-                      </label>
-                      <label class="form-check">
-                        <input class="form-check-input" type="checkbox" value=""onclick="addFilter({type_food:'baked goods'});populateDiv('baked goods')">
-                        <span class="form-check-label">
-                          baked goods
-                        </span>
-                      </label>
-                     
-                    </form>
+                      
               
                     </div> <!-- card-body.// -->
                   </div>
                 </article> <!-- card-group-item.// -->
                 
-                 <!-- card.// -->
+                <article class="card-group-item">
+                  <header class="card-header">
+                    <h6 class="title">Choose type </h6>
+                  </header>
+                  <div class="filter-content">
+                    <div class="card-body">
+                    <label class="form-check">
+                      <input class="form-check-input" type="radio" name="exampleRadio" value="" onclick="addFilter({governerate:'gov 1'});populateDiv('gov 1')">
+                      <span class="form-check-label">
+                        governorate 1
+                      </span>
+                    </label>
+                    <label class="form-check">
+                      <input class="form-check-input" type="radio" name="exampleRadio" value=""onclick="addFilter({governerate:'gov 2'});populateDiv('gov 2')">
+                      <span class="form-check-label">
+                        governorate 2
+                      </span>
+                    </label>
+                    <label class="form-check">
+                      <input class="form-check-input" type="radio" name="exampleRadio" value=""onclick="addFilter({governerate:'gov 3'});populateDiv('gov 3')">
+                      <span class="form-check-label"> 
+                        governorate 3
+                      </span>
+                    </label>
+                    </div>
+                     <!-- card-body.// -->
+                  </div>
+                </article> <!-- card-group-item.// -->
+              </div> <!-- card.// -->
+              
+              
+              
+              
+                </aside> <!-- col.// -->
+                <aside class="col-sm-4">
+              <p>Filter 2</p>
+              
+              
+              <div class="card">
+                <article class="card-group-item">
+                   <!-- card-group-item.// -->
+                <article class="card-group-item">
+                  <header class="card-header"><h6 class="title"><Area></Area></h6></header>
+                  <div class="filter-content">
+                    <div class="card-body">
+                      <label class="btn btn-danger">
+                        <input class="" type="checkbox" name="myradio" value=""onclick="addFilter({area:'area 1'});populateDiv('area 1')">
+                        <span class="form-check-label">Area 1</span>
+                      </label>
+                      <label class="btn btn-success">
+                        <input class="" type="checkbox" name="myradio" value=""onclick="addFilter({area:'area 2'});populateDiv('area 2')">
+                        <span class="form-check-label">Area 2</span>
+                      </label>
+                      <label class="btn btn-primary">
+                        <input class="" type="checkbox" name="myradio" value=""onclick="addFilter({area:'area 3'});populateDiv('area 3')">
+                        <span class="form-check-label">Area 3</span>
+                      </label>
+                    </div> <!-- card-body.// -->
+                  </div>
+                </article> <!-- card-group-item.// -->
+              </div> <!-- card.// -->
+              
+              
+              
+                </aside> <!-- col.// -->
+                <aside class="col-sm-4">
+              
+              
+              
+              
+              
               
               
               
@@ -501,8 +558,8 @@
   <script src="js/jquery.easing.1.3.js"></script>
   <script src="js/aos.js"></script>
 
-  <script src="js/main.js"></script>
-  <script src="js/food_filter.js"></script>
+  <script src="js/teach_posts_filter.js"></script>
+
 
 
 </body>

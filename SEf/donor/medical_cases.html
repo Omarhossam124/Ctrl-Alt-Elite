@@ -24,7 +24,7 @@
 
 </head>
 
-<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+<body  onload="populateDiv()" data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
 
   <div class="site-wrap" id="home-section">
@@ -73,7 +73,7 @@
             <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
               <li><a href="index.html" class="nav-link">Home</a></li>
               <li><a href="about.html" class="nav-link">About Us</a></li>
-              <li class="active"><a href="categories.html" class="nav-link">Our Causes</a></li>
+              <li class="active"><a href="categories.html.html" class="nav-link">Our Causes</a></li>
               <li><a href="blog.html" class="nav-link">Blog</a></li>
               <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
@@ -127,49 +127,128 @@
               <div class="card">
                 <article class="card-group-item">
                   <header class="card-header">
-                    <h6 class="title">Categories </h6>
+                    <h6 class="title">Medical Spec </h6>
                   </header>
                   <div class="filter-content">
                     <div class="card-body">
                     <form>
                       <label class="form-check">
-                        <input class="form-check-input" type="checkbox" value=""onclick="addFilter({type_food:'fruits'});populateDiv('fruits')">
+                        <input class="form-check-input" type="checkbox" value=""onclick="addFilter({specialty:'medical specialty 1'});populateDiv('medical specialty 1')">
                         <span class="form-check-label">
-                          fruits
+                          medical speciality 1
                         </span>
                       </label> <!-- form-check.// -->
                       <label class="form-check">
-                        <input class="form-check-input" type="checkbox" value=""onclick="addFilter({type_food:'vegetables'});populateDiv('vegetables')">
+                        <input class="form-check-input" type="checkbox" value=""onclick="addFilter({specialty:'medical specialty 2'});populateDiv('medical specialty 2')">
                         <span class="form-check-label">
-                          vegtables
+                          medical speciality 2
                         </span>
                       </label>  <!-- form-check.// -->
                       <label class="form-check">
-                        <input class="form-check-input" type="checkbox" value=""onclick="addFilter({type_food:'canned foods'});populateDiv('canned foods')">
+                        <input class="form-check-input" type="checkbox" value=""onclick="addFilter({specialty:'medical specialty 3'});populateDiv('medical specialty 3')">
                         <span class="form-check-label">
-                          canned foods
+                          medical specialty 3
                         </span>
                       </label>  <!-- form-check.// -->
-                      <label class="form-check">
-                        <input class="form-check-input" type="checkbox" value=""onclick="addFilter({type_food:'fresh meals'});populateDiv('fresh meals')">
-                        <span class="form-check-label">
-                          fresh meals
-                        </span>
-                      </label>
-                      <label class="form-check">
-                        <input class="form-check-input" type="checkbox" value=""onclick="addFilter({type_food:'baked goods'});populateDiv('baked goods')">
-                        <span class="form-check-label">
-                          baked goods
-                        </span>
-                      </label>
-                     
-                    </form>
+                      
               
                     </div> <!-- card-body.// -->
                   </div>
                 </article> <!-- card-group-item.// -->
                 
-                 <!-- card.// -->
+                <article class="card-group-item">
+                  <header class="card-header">
+                    <h6 class="title">governerate </h6>
+                  </header>
+                  <div class="filter-content">
+                    <div class="card-body">
+                    <label class="form-check">
+                      <input class="form-check-input" type="radio" name="exampleRadio" value="" onclick="addFilter({governerate:'gov 1'});populateDiv('gov 1')">
+                      <span class="form-check-label">
+                        governerate 1
+                      </span>
+                    </label>
+                    <label class="form-check">
+                      <input class="form-check-input" type="radio" name="exampleRadio" value="" onclick="addFilter({governerate:'gov 2'});populateDiv('gov 2')">
+                      <span class="form-check-label">
+                        governerate 2
+                      </span>
+                    </label>
+                    <label class="form-check">
+                      <input class="form-check-input" type="radio" name="exampleRadio" value=""onclick="addFilter({governerate:'gov 2'});populateDiv('gov 3')"> 
+                      <span class="form-check-label"> 
+                        governerate 3
+                      </span>
+                    </label>
+                    </div>
+                     <!-- card-body.// -->
+                  </div>
+                </article> <!-- card-group-item.// -->
+              </div> <!-- card.// -->
+              
+              
+              
+              
+                </aside> <!-- col.// -->
+                <aside class="col-sm-4">
+              <p>Filter 2</p>
+              
+              
+              <div class="card">
+                <article class="card-group-item">
+                   <!-- card-group-item.// -->
+                <article class="card-group-item">
+                  <header class="card-header"><h6 class="title">Area</h6></header>
+                  <div class="filter-content">
+                    <div class="card-body">
+                      <label class="btn btn-danger">
+                        <input class="" type="checkbox" name="myradio" value=""onclick="addFilter({area:'area 1'});populateDiv('area 1')">
+                        <span class="form-check-label">area 1</span>
+                      </label>
+                      <label class="btn btn-success">
+                        <input class="" type="checkbox" name="myradio" value=""onclick="addFilter({area:'area 2'});populateDiv('area 2')">
+                        <span class="form-check-label">area 2</span>
+                      </label>
+                      <label class="btn btn-primary">
+                        <input class="" type="checkbox" name="myradio" value=""onclick="addFilter({area:'area 3'});populateDiv('area 3')">
+                        <span class="form-check-label">area 3</span>
+                      </label>
+                    </div> <!-- card-body.// -->
+                  </div>
+                </article> <!-- card-group-item.// -->
+              </div> <!-- card.// -->
+              
+              
+              
+                </aside> <!-- col.// -->
+                <aside class="col-sm-4">
+                  <p>Filter 3</p>
+              
+              
+                  <div class="card">
+                    <article class="card-group-item">
+                       <!-- card-group-item.// -->
+                    <article class="card-group-item">
+                      <header class="card-header"><h6 class="title">Organization</h6></header>
+                      <div class="filter-content">
+                        <div class="card-body">
+                          <label class="btn btn-danger">
+                            <input class="" type="checkbox" name="myradio" value=""onclick="addFilter({organization:'organization 1'});populateDiv('organization 1')">
+                            <span class="form-check-label">oragnization 1</span>
+                          </label>
+                          <label class="btn btn-success">
+                            <input class="" type="checkbox" name="myradio" value=""onclick="addFilter({organization:'organization 2'});populateDiv('organization 2')">
+                            <span class="form-check-label">organization 2</span>
+                          </label>
+                          <label class="btn btn-primary">
+                            <input class="" type="checkbox" name="myradio" value=""onclick="addFilter({organization:'organization 3'});populateDiv('organization 3')">
+                            <span class="form-check-label">organization 3</span>
+                          </label>
+                        </div> <!-- card-body.// -->
+                      </div>
+                    </article> <!-- card-group-item.// -->
+                  </div> <!-- card.// -->
+                  
               
               
               
@@ -183,10 +262,11 @@
            
               
               <div>&nbsp;</div>
-
-              <div class="row" id="donationRequests">
-
-                <div class="col-md-4">
+              <!-- <button onclick="populateDiv()">click me</button> -->
+              <div class="row" id="donationRequests" onload="populateDiv()">
+                
+                  
+                <!-- <div class="col-md-4">
                   <div class="cause shadow-sm">
 
                     <a href="#" class="cause-link d-block">
@@ -205,7 +285,7 @@
 
                       <h3 class="mb-4"><a href="#">donation request 1</a></h3>
                       <div class="border-top border-light border-bottom py-2 d-flex">
-                        <div></div>
+                        <div>Male</div>
                         <div class="ml-auto"><strong class="text-primary"></strong></div>
                       </div>
 
@@ -238,7 +318,7 @@
                       </div>
                       <h3 class="mb-4"><a href="#">donation request 2</a></h3>
                       <div class="border-top border-light border-bottom py-2 d-flex">
-                        <div></div>
+                        <div>Female</div>
                         <div class="ml-auto"><strong class="text-primary"></strong></div>
                       </div>
 
@@ -272,7 +352,7 @@
                         Clothes</div>
                       <h3 class="mb-4"><a href="#">donation request 3</a></h3>
                       <div class="border-top border-light border-bottom py-2 d-flex">
-                        <div></div>
+                        <div>Male</div>
                         <div class="ml-auto"><strong class="text-primary"></strong></div>
                       </div>
 
@@ -307,7 +387,7 @@
                       </div>
                       <h3 class="mb-4"><a href="#">donation request 1</a></h3>
                       <div class="border-top border-light border-bottom py-2 d-flex">
-                        <div></div>
+                        <div>Male</div>
                         <div class="ml-auto"><strong class="text-primary"></strong></div>
                       </div>
 
@@ -340,7 +420,7 @@
                         Clothes</div>
                       <h3 class="mb-4"><a href="#">Alias Odit Ipsam Quas Unde Obcaecati</a></h3>
                       <div class="border-top border-light border-bottom py-2 d-flex">
-                        <div></div>
+                        <div>Female</div>
                         <div class="ml-auto"><strong class="text-primary"></strong></div>
                       </div>
 
@@ -374,7 +454,7 @@
                         Clothes</div>
                       <h3 class="mb-4"><a href="#">Alias Odit Ipsam Quas Unde Obcaecati</a></h3>
                       <div class="border-top border-light border-bottom py-2 d-flex">
-                        <div></div>
+                        <div>Female</div>
                         <div class="ml-auto"><strong class="text-primary"></strong></div>
                       </div>
 
@@ -386,7 +466,7 @@
                       </div>
                     </div>
 
-                  </div>
+                  </div> -->
 
                 </div>
 
@@ -502,7 +582,7 @@
   <script src="js/aos.js"></script>
 
   <script src="js/main.js"></script>
-  <script src="js/food_filter.js"></script>
+  <script src="js/medical_cases_filter.js"></script>
 
 
 </body>

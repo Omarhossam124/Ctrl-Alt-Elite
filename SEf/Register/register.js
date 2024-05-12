@@ -206,3 +206,41 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+// Function to save user type to localStorage
+function saveUserType() {
+    const userType = document.querySelector('input[name="usertype"]:checked').value;
+    localStorage.setItem('userType', userType);
+}
+
+// Event listener for radio button change
+document.querySelectorAll('input[name="usertype"]').forEach((radio) => {
+    radio.addEventListener('change', saveUserType);
+});
+
+// Function to open the map modal
+function openMapModal() {
+    document.getElementById("mapModal").style.display = "block";
+    initializeMap();
+  }
+  
+  // Function to close the map modal
+  function closeMapModal() {
+    document.getElementById("mapModal").style.display = "none";
+  }
+  
+  // Function to initialize the map with a draggable marker
+  function initializeMap() {
+    const map = new google.maps.Map(document.getElementById("map"), {
+      center: { lat: 40.7128, lng: -74.0060 }, // Initial map center
+      zoom: 10, // Initial zoom level
+    });
+  
+    // Add a draggable marker to the map
+    const marker = new google.maps.Marker({
+      position: { lat: 40.7128, lng: -74.0060 }, // Initial marker position
+      map: map,
+      draggable: true, // Allow the marker to be dragged
+    });
+  }
+  

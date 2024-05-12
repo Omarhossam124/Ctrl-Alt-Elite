@@ -46,9 +46,10 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6 text-md-left pl-0">
-            <a href="#" class=" pr-3 pl-0">Home</a>
+            <a href="index.html" class=" pr-3 pl-0">Home</a>
             <a href="#" class="p-3">Events</a>
             <a href="#" class="p-3">Become A Volunteer</a>
+            <a href="../Profile/Profile.html" class="p-3">profile</a>
           </div>
           <div class="col-md-6 text-md-right">
             <a href="#" class="p-3"><span class="icon-twitter"></span></a>
@@ -72,7 +73,7 @@
             <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
               <li><a href="index.html" class="nav-link">Home</a></li>
               <li><a href="about.html" class="nav-link">About Us</a></li>
-              <li class="active"><a href="causes.html" class="nav-link">Our Causes</a></li>
+              <li class="active"><a href="categories.html" class="nav-link">Our Causes</a></li>
               <li><a href="blog.html" class="nav-link">Blog</a></li>
               <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
@@ -132,39 +133,39 @@
                     <div class="card-body">
                     <form>
                       <label class="form-check">
-                        <input class="form-check-input" type="checkbox" value="">
+                        <input class="form-check-input" type="checkbox" value=""onclick="addFilter({type_toy:'board games'});populateDiv('board games')">
                         <span class="form-check-label">
-                          School supplies
+                          board games
                         </span>
                       </label> <!-- form-check.// -->
                       <label class="form-check">
-                        <input class="form-check-input" type="checkbox" value="">
+                        <input class="form-check-input" type="checkbox" value=""onclick="addFilter({type_toy:'stuffed toys'});populateDiv('stuffed toys')">
                         <span class="form-check-label">
-                          Toys
+                          stuffed toys
                         </span>
                       </label>  <!-- form-check.// -->
                       <label class="form-check">
-                        <input class="form-check-input" type="checkbox" value="">
+                        <input class="form-check-input" type="checkbox" value=""onclick="addFilter({type_toy:'dolls'});populateDiv('dolls')">
                         <span class="form-check-label">
-                          Medical supplies
+                          dolls
                         </span>
                       </label>  <!-- form-check.// -->
                       <label class="form-check">
-                        <input class="form-check-input" type="checkbox" value="">
+                        <input class="form-check-input" type="checkbox" value=""onclick="addFilter({type_toy:'sports'});populateDiv('sports')">
                         <span class="form-check-label">
-                          Food
+                          sports
                         </span>
                       </label>
                       <label class="form-check">
-                        <input class="form-check-input" type="checkbox" value="">
+                        <input class="form-check-input" type="checkbox" value=""onclick="addFilter({type_toy:'cars'});populateDiv('cars')">
                         <span class="form-check-label">
-                          Clothes
+                          cars
                         </span>
                       </label>
                       <label class="form-check">
-                        <input class="form-check-input" type="checkbox" value="">
+                        <input class="form-check-input" type="checkbox" value=""onclick="addFilter({type_toy:'outdoor'});populateDiv('outdoor')">
                         <span class="form-check-label">
-                          Blood donations
+                          outdoor
                         </span>
                       </label>
                     </form>
@@ -173,129 +174,7 @@
                   </div>
                 </article> <!-- card-group-item.// -->
                 
-                <article class="card-group-item">
-                  <header class="card-header">
-                    <h6 class="title">Choose type </h6>
-                  </header>
-                  <div class="filter-content">
-                    <div class="card-body">
-                    <label class="form-check">
-                      <input class="form-check-input" type="radio" name="exampleRadio" value="">
-                      <span class="form-check-label">
-                        Male
-                      </span>
-                    </label>
-                    <label class="form-check">
-                      <input class="form-check-input" type="radio" name="exampleRadio" value="">
-                      <span class="form-check-label">
-                        Female
-                      </span>
-                    </label>
-                    <label class="form-check">
-                      <input class="form-check-input" type="radio" name="exampleRadio" value="">
-                      <span class="form-check-label"> 
-                        Both
-                      </span>
-                    </label>
-                    </div>
-                     <!-- card-body.// -->
-                  </div>
-                </article> <!-- card-group-item.// -->
-              </div> <!-- card.// -->
-              
-              
-              
-              
-                </aside> <!-- col.// -->
-                <aside class="col-sm-4">
-              <p>Filter 2</p>
-              
-              
-              <div class="card">
-                <article class="card-group-item">
-                   <!-- card-group-item.// -->
-                <article class="card-group-item">
-                  <header class="card-header"><h6 class="title">Color check</h6></header>
-                  <div class="filter-content">
-                    <div class="card-body">
-                      <label class="btn btn-danger">
-                        <input class="" type="checkbox" name="myradio" value="">
-                        <span class="form-check-label">Red</span>
-                      </label>
-                      <label class="btn btn-success">
-                        <input class="" type="checkbox" name="myradio" value="">
-                        <span class="form-check-label">Green</span>
-                      </label>
-                      <label class="btn btn-primary">
-                        <input class="" type="checkbox" name="myradio" value="">
-                        <span class="form-check-label">Blue</span>
-                      </label>
-                    </div> <!-- card-body.// -->
-                  </div>
-                </article> <!-- card-group-item.// -->
-              </div> <!-- card.// -->
-              
-              
-              
-                </aside> <!-- col.// -->
-                <aside class="col-sm-4">
-              <p>Filter  3</p>
-              
-              
-              
-              <div class="card">
-                <article class="card-group-item">
-                  <header class="card-header">
-                    <h6 class="title">Age </h6>
-                  </header>
-                  <div class="filter-content">
-                    <div class="card-body">
-                    <div class="form-row">
-                    <div class="form-group col-md-6">
-                      <label>Min</label>
-                      <input type="number" class="form-control" id="inputEmail4" placeholder="">
-                    </div>
-                    <div class="form-group col-md-6 text-right">
-                      <label>Max</label>
-                      <input type="number" class="form-control" placeholder="">
-                    </div>
-                    </div>
-                    </div> <!-- card-body.// -->
-                  </div>
-                </article> <!-- card-group-item.// -->
-                <article class="card-group-item">
-                  <header class="card-header">
-                    <h6 class="title">Selection </h6>
-                  </header>
-                  <div class="filter-content">
-                    <div class="card-body">
-                      <div class="custom-control custom-checkbox">
-                        <span class="float-right badge badge-light round">52</span>
-                          <input type="checkbox" class="custom-control-input" id="Check1">
-                          <label class="custom-control-label" for="Check1">Samsung</label>
-                      </div> <!-- form-check.// -->
-              
-                      <div class="custom-control custom-checkbox">
-                        <span class="float-right badge badge-light round">132</span>
-                          <input type="checkbox" class="custom-control-input" id="Check2">
-                         <label class="custom-control-label" for="Check2">Black berry</label>
-                      </div> <!-- form-check.// -->
-              
-                      <div class="custom-control custom-checkbox">
-                        <span class="float-right badge badge-light round">17</span>
-                          <input type="checkbox" class="custom-control-input" id="Check3">
-                          <label class="custom-control-label" for="Check3">Samsung</label>
-                      </div> <!-- form-check.// -->
-              
-                      <div class="custom-control custom-checkbox">
-                        <span class="float-right badge badge-light round">7</span>
-                          <input type="checkbox" class="custom-control-input" id="Check4">
-                          <label class="custom-control-label" for="Check4">Other Brand</label>
-                      </div> <!-- form-check.// -->
-                    </div> <!-- card-body.// -->
-                  </div>
-                </article> <!-- card-group-item.// -->
-              </div> <!-- card.// -->
+                 <!-- card.// -->
               
               
               
@@ -628,7 +507,7 @@
   <script src="js/aos.js"></script>
 
   <script src="js/main.js"></script>
-
+  <script src="js/toys_filter.js"></script>
 
 
 </body>
