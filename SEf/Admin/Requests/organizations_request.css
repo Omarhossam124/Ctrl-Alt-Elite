@@ -1,0 +1,65 @@
+@import url("../../assets/theme.css");
+
+.ItemTextClass {
+    color : var(--text);
+    font-size: large;
+    font-weight: bold
+}
+
+.HeadingClass{
+    color : var(--text);
+    font-size: xx-large;
+    text-align: center;
+    font-weight: bold ;
+}
+
+
+.SubHeadingClass{
+    color : var(--text);
+    font-size: x-large;
+    text-align: center;
+}
+
+.sidebar {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #05445E;
+    overflow-x: hidden;
+    padding-top: 16px;
+}
+
+.sidebar a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #D4F1F4;
+    display: block;
+}
+
+.sidebar a:hover {
+    color: #000000;
+}
+
+.main {
+    margin-left: 160px;
+    /* Same as the width of the sidenav */
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+
+}
+
+@media screen and (max-height: 450px) {
+    .sidebar {
+        padding-top: 15px;
+    }
+
+    .sidebar a {
+        font-size: 18px;
+    }
+}
