@@ -21,6 +21,7 @@ body {
     padding: 20px;
     background: #fff;
     border-radius: 8px;
+    position: relative;
 }
 
 
@@ -139,14 +140,6 @@ button:hover {
     margin-bottom: 20px; /* Adjust the value as needed */
 }
 
-#map {
-    width: 100%; /* Set the width of the map container */
-    height: 400px; /* Set the height of the map container */
-    border: 1px solid #ccc; /* Add a border to the map container */
-    border-radius: 4px; /* Add border radius to the map container */
-    margin-top: 20px; /* Add some top margin to create space between the map and other elements */
-}
-
 #doctorFields {
     margin-top: 20px; /* Add some top margin for spacing */
 }
@@ -165,4 +158,11 @@ button:hover {
     border: 1px solid #ccc; /* Add border */
     border-radius: 4px; /* Add border radius */
     box-sizing: border-box; /* Ensure padding and border are included in width calculation */
+}
+
+iframe{
+    width: 80%;
+    height: 80%;
+    margin: 0 auto; /* This will center the iframe horizontally */
+    display: block; /* Ensures proper block-level rendering */
 }
