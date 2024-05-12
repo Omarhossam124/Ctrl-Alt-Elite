@@ -1,0 +1,11 @@
+.navbar-bell {
+    position: relative;
+}
+.badge-notification {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+}
+.dropdown-menu-notification {
+    margin-top: 10px; /* Adjust the top margin as needed */
+}

@@ -106,28 +106,19 @@ document.addEventListener("DOMContentLoaded", function() {
 document.addEventListener("DOMContentLoaded", function() {
     var donorTypeDropdown = document.getElementById("donorType");
     var clinicFields = document.getElementById("doctorFields");
-    var addressFormGroup = document.getElementById("addressFormGroup");
-    var governorateFormGroup = document.getElementById("governorateFormGroup");
 
-    // Initially hide the clinic fields, address, and governorate fields
+    // Initially hide the clinic fields only
     clinicFields.style.display = "none";
-    addressFormGroup.style.display = "block"; // Initially shown
-    governorateFormGroup.style.display = "block"; // Initially shown
 
     // Event listener for changes in the dropdown selection
     donorTypeDropdown.addEventListener("change", function() {
         if (donorTypeDropdown.value === "doctor") {
             clinicFields.style.display = "block"; // Show the doctor fields
-            addressFormGroup.style.display = "none"; // Hide the address field
-            governorateFormGroup.style.display = "none"; // Hide the governorate field
         } else {
             clinicFields.style.display = "none"; // Hide the doctor fields
-            addressFormGroup.style.display = "block"; // Show the address field
-            governorateFormGroup.style.display = "block"; // Show the governorate field
         }
     });
 });
-
 
 document.addEventListener("DOMContentLoaded", function() {
     var donorRadioButton = document.getElementById("donor");
@@ -161,43 +152,28 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-    var donorRadioButton = document.getElementById("donor");
     var donorTypeDropdown = document.getElementById("donorType");
+    var teacherFields = document.getElementById("teacherFields");
     var addressFormGroup = document.getElementById("addressFormGroup");
     var governorateFormGroup = document.getElementById("governorateFormGroup");
 
     // Initially hide the teacher fields
-    var teacherFields = document.getElementById("teacherFields");
     teacherFields.style.display = "none";
 
     // Event listener for changes in the dropdown selection
     donorTypeDropdown.addEventListener("change", function() {
-        if (donorRadioButton.checked && donorTypeDropdown.value === "teacher") {
-            teacherFields.style.display = "block"; // Show the teacher fields if donor option is selected and teacher is chosen
-            addressFormGroup.remove(); // Remove the address field if teacher is chosen
-            governorateFormGroup.remove(); // Remove the governorate field if teacher is chosen
+        if (donorTypeDropdown.value === "teacher") {
+            teacherFields.style.display = "block"; // Show the teacher fields
+            addressFormGroup.style.display = "none"; // Hide the address field
+            governorateFormGroup.style.display = "none"; // Hide the governorate field
         } else {
-            teacherFields.style.display = "none"; // Hide the teacher fields for other options
-            // Add the address and governorate fields back to the DOM if not teacher
-            document.getElementById("registration-form").appendChild(addressFormGroup);
-            document.getElementById("registration-form").appendChild(governorateFormGroup);
-        }
-    });
-
-    // Event listener for changes in the radio button selection
-    donorRadioButton.addEventListener("change", function() {
-        if (donorRadioButton.checked && donorTypeDropdown.value === "teacher") {
-            teacherFields.style.display = "block"; // Show the teacher fields if donor option is selected and teacher is chosen
-            addressFormGroup.remove(); // Remove the address field if teacher is chosen
-            governorateFormGroup.remove(); // Remove the governorate field if teacher is chosen
-        } else {
-            teacherFields.style.display = "none"; // Hide the teacher fields for other options
-            // Add the address and governorate fields back to the DOM if not teacher
-            document.getElementById("registration-form").appendChild(addressFormGroup);
-            document.getElementById("registration-form").appendChild(governorateFormGroup);
+            teacherFields.style.display = "none"; // Hide the teacher fields
+            addressFormGroup.style.display = "block"; // Show the address field
+            governorateFormGroup.style.display = "block"; // Show the governorate field
         }
     });
 });
+
 
 document.addEventListener("DOMContentLoaded", function() {
     var donorTypeDropdown = document.getElementById("donorType");
@@ -229,46 +205,4 @@ document.addEventListener("DOMContentLoaded", function() {
             governorateFormGroup.style.display = "block"; // Show the governorate field
         }
     });
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-    var donorRadioButton = document.getElementById("donor");
-    var organizationRadioButton = document.getElementById("organization");
-    var donorTypeDropdown = document.getElementById("donorType");
-    var clinicFields = document.getElementById("doctorFields");
-    var teacherFields = document.getElementById("teacherFields");
-    var addressFormGroup = document.getElementById("addressFormGroup");
-    var governorateFormGroup = document.getElementById("governorateFormGroup");
-
-    // Initially hide the clinic and teacher fields
-    clinicFields.style.display = "none";
-    teacherFields.style.display = "none";
-
-    // Function to toggle visibility of address and governorate fields
-    function toggleAddressAndGovernorateFields() {
-        if (donorRadioButton.checked && donorTypeDropdown.value === "doctor") {
-            clinicFields.style.display = "block"; // Show the doctor fields
-            addressFormGroup.style.display = "none"; // Hide the address field
-            governorateFormGroup.style.display = "none"; // Hide the governorate field
-            teacherFields.style.display = "none"; // Hide the teacher fields
-        } else if (donorRadioButton.checked && donorTypeDropdown.value === "teacher") {
-            clinicFields.style.display = "none"; // Hide the doctor fields
-            addressFormGroup.style.display = "none"; // Hide the address field
-            governorateFormGroup.style.display = "none"; // Hide the governorate field
-            teacherFields.style.display = "block"; // Show the teacher fields
-        } else {
-            clinicFields.style.display = "none"; // Hide the doctor fields
-            teacherFields.style.display = "none"; // Hide the teacher fields
-            addressFormGroup.style.display = "block"; // Show the address field
-            governorateFormGroup.style.display = "block"; // Show the governorate field
-        }
-    }
-
-    // Add event listeners to handle changes in radio buttons and dropdown
-    donorRadioButton.addEventListener("change", toggleAddressAndGovernorateFields);
-    organizationRadioButton.addEventListener("change", toggleAddressAndGovernorateFields);
-    donorTypeDropdown.addEventListener("change", toggleAddressAndGovernorateFields);
-
-    // Initialize visibility of address and governorate fields
-    toggleAddressAndGovernorateFields();
 });

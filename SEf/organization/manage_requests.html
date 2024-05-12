@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Post Requests</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Organization</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="create_post.html">Create Post</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="manage_requests.html">Manage Requests</a>
+                </li>
+            </ul>
+            <!-- Bell icon for notifications -->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown navbar-bell">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge badge-danger badge-notification">1</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-notification" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">New message</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-4">
+        <h1>Manage Donation Post Requests</h1>
+        <p>Approve or reject donation post requests:</p>
+
+        <!-- Donation Post Requests -->
+        <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Sample Donation Post 1</h5>
+                    <small>Pending</small>
+                </div>
+                <p class="mb-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <small>Category: Clothes</small>
+                <div class="btn-group" role="group" aria-label="Options">
+                    <button type="button" class="btn btn-success">Approve</button>
+                    <button type="button" class="btn btn-danger">Reject</button>
+                </div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Sample Donation Post 2</h5>
+                    <small>Pending</small>
+                </div>
+                <p class="mb-1">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <small>Category: Toys</small>
+                <div class="btn-group" role="group" aria-label="Options">
+                    <button type="button" class="btn btn-success">Approve</button>
+                    <button type="button" class="btn btn-danger">Reject</button>
+                </div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Sample Donation Post 3</h5>
+                    <small>Pending</small>
+                </div>
+                <p class="mb-1">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <small>Category: Food</small>
+                <div class="btn-group" role="group" aria-label="Options">
+                    <button type="button" class="btn btn-success">Approve</button>
+                    <button type="button" class="btn btn-danger">Reject</button>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
