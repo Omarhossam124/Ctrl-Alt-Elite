@@ -1,4 +1,11 @@
-const requests =JSON.parse(localStorage.getItem("requests"));
+const requests =JSON.parse(localStorage.getItem("userData"));
+// const requests= [{"id": 1, "name": "mersal", "details": "spreading happines since 2000"},
+//  {"id": 2, "name": "masr elkheer", "details": "masr dayman feeha kheer"},
+//   {"id": 3, "name": "basma", "details": "ersem basma"}, 
+//   {"id": 4, "name": "youturn", "details": "take the right youturn"},
+//    {"id": 5, "name": "hedaya", "details": "since 1999"},
+//     {"id": 6, "name": "maadians", "details": "pleasing every maadian"},
+//      {"id": 7, "name": "easylearn", "details": "trying to let you learn easily"}]  
 
 const acceptedRequests = [];
 const rejectedRequests = [];
