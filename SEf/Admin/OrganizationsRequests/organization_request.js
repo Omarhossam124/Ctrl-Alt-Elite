@@ -1,11 +1,11 @@
 //const requests =JSON.parse(localStorage.getItem("userData"));
-const requests= [{"id": 1, "name": "mersal", "details": "spreading happines since 2000"},
- {"id": 2, "name": "masr elkheer", "details": "masr dayman feeha kheer"},
-  {"id": 3, "name": "basma", "details": "ersem basma"}, 
-  {"id": 4, "name": "youturn", "details": "take the right youturn"},
-  {"id": 5, "name": "hedaya", "details": "since 1999"},
-  {"id": 6, "name": "maadians", "details": "pleasing every maadian"},
-  {"id": 7, "name": "easylearn", "details": "trying to let you learn easily"}]  
+const requests= [{"id": 1, "name": "mersal", "slogan": "spreading happines since 2000","location" : "28 street 289 Maadi" ,"email":"mersal@gmail.com" , "number":"011273527"},
+ {"id": 2, "name": "masr elkheer", "slogan": "masr dayman feeha kheer" ,"location" : "13 street 10 Mokattam","email":"masrelkheer@gmail.com", "number":"032784227"},
+  {"id": 3, "name": "basma", "slogan": "ersem basma" ,"location" : "47 Mountain View","email":"basma@gmail.com", "number":"0122346478"}, 
+  {"id": 4, "name": "youturn", "slogan": "take the right youturn" ,"location" : "5 street 300 Maadi","email":"youturn@gmail.com", "number":"038342828"},
+  {"id": 5, "name": "hedaya", "slogan": "since 1999", "location" : "28 banfseg district tagmoa","email":"hedaya@gmail.com", "number":"013446478"},
+  {"id": 6, "name": "maadians", "slogan": "pleasing every maadian" , "location" :  "street 289 Maadi","email":"maadians@gmail.com", "number":"011515578"},
+  {"id": 7, "name": "easylearn", "slogan": "trying to let you learn easily" , "location" : "8 street 89 Maadi","email":"easylearn@gmail.com", "number":"0122346478"}]  
 
 const acceptedRequests = [];
 const rejectedRequests = [];
@@ -30,7 +30,7 @@ function buildMainRequestsTable() {
     DetButton.setAttribute("data-bs-target","#exampleModal");
     DetButton.addEventListener("click", () => openPopupHandler(request));
 
-    DetButton.textContent = "Details";
+    DetButton.textContent = "View Details" ;
 
     const acceptButton = document.createElement("button");
     acceptButton.classList.add("btn", "btn-primary", "btn-sm");
@@ -122,6 +122,14 @@ function openPopupHandler(request){
 console.log(request);
 var orgName = document.getElementById("OrgName")
 var location = document.getElementById("location")
-location.textContent = request.location;
+var slogan = document.getElementById("slogan")
+var email = document.getElementById("email")
+var number = document.getElementById("number")
+
 orgName.textContent = request.name;
+location.textContent = request.location;
+slogan.textContent = request.slogan;
+email.textContent = request.email;
+number.textContent = request.number;
+as
 }
