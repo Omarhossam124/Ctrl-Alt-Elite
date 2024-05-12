@@ -128,7 +128,17 @@
             </div>
             <br>
             <br>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.7423715286795!2d31.438770874674777!3d29.9868331212997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583cb2bfafbe73%3A0x6e7220116094726d!2sGerman%20University%20in%20Cairo%20(GUC)!5e0!3m2!1sen!2seg!4v1715532987754!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.7423715286795!2d31.438770874674777!3d29.9868331212997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583cb2bfafbe73%3A0x6e7220116094726d!2sGerman%20University%20in%20Cairo%20(GUC)!5e0!3m2!1sen!2seg!4v1715532987754!5m2!1sen!2seg&markers=29.9868331212997,31.438770874674777" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <br>
+            <!-- Button to open the map modal -->
+            <button onclick="openMapModal()">Open Map</button>
+            <!-- Modal for displaying the map with a draggable marker -->
+            <div id="mapModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeMapModal()">&times;</span>
+                    <div id="map"></div>
+                </div>
+            </div>
 
         </form>
     </div>

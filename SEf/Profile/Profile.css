@@ -54,7 +54,7 @@ body {
     padding: 5px 20px; /* Adjust padding */
     font-size: 16px; /* Adjust font size */
     background-color: #00a651; /* Blue color for button */
-    color: #fff; /* White text color */
+    color: #000; /* White text color */
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -63,6 +63,7 @@ body {
 
 .btn.btn-primary:hover {
     background-color: #00c030;
+    color: #fff;
 }
 
 /* Style log out button */
@@ -72,7 +73,7 @@ body {
     padding: 5px 20px; /* Adjust padding */
     font-size: 16px; /* Adjust font size */
     background-color: #00a651; /* Blue color for button */
-    color: #fff; /* White text color */
+    color: #000; /* White text color */
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -81,8 +82,8 @@ body {
 
 #logout-btn:hover {
     background-color: #00c030;
+    color: #fff;
 }
-
 
 /* Style for the modal backdrop */
 .modal-backdrop {
@@ -113,7 +114,7 @@ body {
 /* Style for the confirmation button */
 .btn-primary {
     background-color: #007bff; /* Blue color */
-    color: #fff; /* White text color */
+    color: #000; /* White text color */
     border: none;
     border-radius: 5px;
     padding: 8px 20px;
@@ -124,6 +125,7 @@ body {
 /* Change button color on hover */
 .btn-primary:hover {
     background-color: #0056b3; /* Darker blue color */
+    color: #fff
 }
 
 
@@ -136,7 +138,7 @@ body {
     padding: 5px 20px; /* Adjust padding */
     font-size: 16px; /* Adjust font size */
     background-color: #fc3333; /* Blue color for button */
-    color: #fff; /* White text color */
+    color: #000; /* White text color */
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -146,6 +148,7 @@ body {
 /* Change background color on hover */
 #deactivate-btn:hover {
     background-color: #e00000;
+    color: #fff
 }
 
 /* Style the modals */
@@ -169,12 +172,13 @@ body {
 
 #confirm-deactivate-btn {
     background-color: #fc3333; /* Red color for button */
-    color: #fff; /* White text color */
+    color: #000; /* White text color */
 }
 
 /* Change background color of the deactivate button inside the modal on hover */
 #confirm-deactivate-btn:hover {
     background-color: #e00000; /* Darker red color for button on hover */
+    color:#FFF;
 }
 
 
@@ -192,7 +196,7 @@ body {
 
 .btn-sm:hover{
     background-color: #0056b3;
-    color: black;
+    color: #fff;
 }
 
 /* Style the edit picture button */
@@ -212,6 +216,7 @@ body {
 /* Change background color on hover */
 .edit-picture-button:hover {
     background-color: #00a6ff;
+    color: #FFF
 }
 
 /* Position Edit Picture Button */
@@ -219,3 +224,28 @@ body {
     text-align: center; /* Center-align the button */
     margin-top: 10px; /* Add space between the profile picture and the button */
 }
+
+/* CSS for positioning the button */
+.button-container {
+    position: fixed; /* Fixed positioning */
+    bottom: 20px; /* Adjust the distance from the bottom */
+    left: 20px; /* Adjust the distance from the left */
+    display: flex; /* Use flexbox */
+    gap: 10px; /* Add space between the button and other elements */
+  }
+  
+  #back-btn {
+    background-color: #00a651; /* Blue background color */
+    color: #000; /* White text color */
+    padding: 10px 20px; /* Padding */
+    border: none; /* No border */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+  }
+  
+  /* Hover effect */
+  #back-btn:hover {
+    background-color: #00c030; /* Darker blue background color */
+    color: #fff;
+  }
+  
