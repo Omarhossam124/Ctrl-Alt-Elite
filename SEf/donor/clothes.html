@@ -24,7 +24,7 @@
 
 </head>
 
-<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+<body  onload="populateDiv()" data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
 
   <div class="site-wrap" id="home-section">
@@ -115,59 +115,182 @@
 
           <div class="container">
             <input id="searchbar" onkeyup="search()" type="text" name="search" placeholder="Search...">
-
-
-
-            <br>
-            <div class="side_bar_and_don_req">
-              <div class="col-lg-3 blog-form" id="side_bar">
-                <h2 class="blog-sidebar-title"><b>Cart</b></h2>
-                <hr>
-                <p class="blog-sidebar-text">No products in the cart...</p>
-                <div>&nbsp;</div>
-                <div>&nbsp;</div>
-
-                <h2 class="blog-sidebar-title"><b>Categories</b></h2>
-                <hr>
-
-                <p class="blog-sidebar-list"><b><span class="list-icon"> &gt; </span> Coffee</b></p>
-                <p class="blog-sidebar-list"><b><span class="list-icon"> &gt; </span> Green Coffee</b></p>
-                <p class="blog-sidebar-list"><b><span class="list-icon"> &gt; </span> Nigerian</b></p>
-                <p class="blog-sidebar-list"><b><span class="list-icon"> &gt; </span> Roasted Coffee</b></p>
-                <p class="blog-sidebar-list"><b><span class="list-icon"> &gt; </span> Uncategorized</b></p>
-
-                <div>&nbsp;</div>
-                <div>&nbsp;</div>
-
-                <h2 class="blog-sidebar-title"><b>Filter</b></h2>
-                <hr>
-
-                <div class="input-group mb-3">
-                  <input type="text" class="form-control" placeholder="Search" aria-label="Receipient's username"
-                    aria-describely="basic-addon2">
-                  <div class="input-group-append">
-                    <span class="input-group-text" id="basic-addon2"><i class="fa fa-search"></i></span>
+            <div class="container">
+              <hr>
+              
+              <div class="row">
+                <aside class="col-sm-4">
+              <p>Filter 1</p>
+              
+              
+              <div class="card">
+                <article class="card-group-item">
+                  <header class="card-header">
+                    <h6 class="title">type </h6>
+                  </header>
+                  <div class="filter-content">
+                    <div class="card-body">
+                    <form>
+                      <label class="form-check">
+                        <input class="form-check-input" type="checkbox" value="">
+                        <span class="form-check-label">
+                          t-shirt
+                        </span>
+                      </label> <!-- form-check.// -->
+                      <label class="form-check">
+                        <input class="form-check-input" type="checkbox" value="">
+                        <span class="form-check-label">
+                          shirt
+                        </span>
+                      </label>  <!-- form-check.// -->
+                      <label class="form-check">
+                        <input class="form-check-input" type="checkbox" value="">
+                        <span class="form-check-label">
+                          hoodie
+                        </span>
+                      </label>  <!-- form-check.// -->
+                      <label class="form-check">
+                        <input class="form-check-input" type="checkbox" value="">
+                        <span class="form-check-label">
+                          Pullover
+                        </span>
+                      </label>
+                      <label class="form-check">
+                        <input class="form-check-input" type="checkbox" value="">
+                        <span class="form-check-label">
+                          Pants
+                        </span>
+                      </label>
+                      <label class="form-check">
+                        <input class="form-check-input" type="checkbox" value="">
+                        <span class="form-check-label">
+                          Shorts
+                        </span>
+                      </label>
+                    </form>
+              
+                    </div> <!-- card-body.// -->
                   </div>
-
-                </div>
-
-                <p class="tags">Price $4 - $25</p>
-                <button type="button" class="btn btn-dark btn-lg">Filter</button>
-
-                <div>&nbsp;</div>
-                <div>&nbsp;</div>
-                <h2 class="blog-sidebar-title"><b>Tags</b></h2>
-                <p class="product-sidebar-list"><b>#accessory, #arabica</b></p>
-                <p class="product-sidebar-list"><b>#candy, #bean, #cup</b></p>
-                <p class="product-sidebar-list"><b>#ethopian, #latte</b></p>
-
-
+                </article> <!-- card-group-item.// -->
+                
+                <article class="card-group-item">
+                  <header class="card-header">
+                    <h6 class="title">Gender </h6>
+                  </header>
+                  <div class="filter-content">
+                    <div class="card-body">
+                    <label class="form-check">
+                      <input class="form-check-input" type="radio" name="exampleRadio" value="" onclick="addFilter({gender:'male'})">
+                      <span class="form-check-label">
+                        Male
+                      </span>
+                    </label>
+                    <label class="form-check">
+                      <input class="form-check-input" type="radio" name="exampleRadio" value="" onclick="populateDiv({gender:'female'})">
+                      <span class="form-check-label">
+                        Female
+                      </span>
+                    </label>
+                    <label class="form-check">
+                      <input class="form-check-input" type="radio" name="exampleRadio" value="">
+                      <span class="form-check-label"> 
+                        Both
+                      </span>
+                    </label>
+                    </div>
+                     <!-- card-body.// -->
+                  </div>
+                </article> <!-- card-group-item.// -->
+              </div> <!-- card.// -->
+              
+              
+              
+              
+                </aside> <!-- col.// -->
+                <aside class="col-sm-4">
+              <p>Filter 2</p>
+              
+              
+              <div class="card">
+                <article class="card-group-item">
+                   <!-- card-group-item.// -->
+                <article class="card-group-item">
+                  <header class="card-header"><h6 class="title">Color check</h6></header>
+                  <div class="filter-content">
+                    <div class="card-body">
+                      <label class="btn btn-danger">
+                        <input class="" type="checkbox" name="myradio" value="">
+                        <span class="form-check-label">Summer</span>
+                      </label>
+                      <label class="btn btn-success">
+                        <input class="" type="checkbox" name="myradio" value="">
+                        <span class="form-check-label">Winter</span>
+                      </label>
+                      <label class="btn btn-primary">
+                        <input class="" type="checkbox" name="myradio" value="">
+                        <span class="form-check-label">Spring</span>
+                      </label>
+                    </div> <!-- card-body.// -->
+                  </div>
+                </article> <!-- card-group-item.// -->
+              </div> <!-- card.// -->
+              
+              
+              
+                </aside> <!-- col.// -->
+                <aside class="col-sm-4">
+              <p>Filter  3</p>
+              
+              
+              
+              <div class="card">
+                <article class="card-group-item">
+                  <header class="card-header">
+                    <h6 class="title">Age </h6>
+                  </header>
+                  <div class="filter-content">
+                    <div class="card-body">
+                    <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label>Min</label>
+                      <input type="number" class="form-control" id="inputEmail4" placeholder="">
+                    </div>
+                    <div class="form-group col-md-6 text-right">
+                      <label>Max</label>
+                      <input type="number" class="form-control" placeholder="">
+                    </div>
+                    </div>
+                    </div> <!-- card-body.// -->
+                  </div>
+                </article> <!-- card-group-item.// -->
+                <article class="card-group-item">
+                  <header class="card-header">
+                    
+                  </header>
+                  <div class="filter-content">
+                     <!-- form-check.// -->
+                    </div> <!-- card-body.// -->
+                  </div>
+                </article> <!-- card-group-item.// -->
+              </div> <!-- card.// -->
+              
+              
+              
+                </aside> <!-- col.// -->
+              </div> <!-- row.// -->
+              
               </div>
+            
+            <div class="button-area filters">
+            <br>
+           
+              
               <div>&nbsp;</div>
-
-              <div class="row" id="donationRequests">
-
-                <div class="col-md-4">
+              <!-- <button onclick="populateDiv()">click me</button> -->
+              <div class="row" id="donationRequests" onload="populateDiv()">
+                
+                  
+                <!-- <div class="col-md-4">
                   <div class="cause shadow-sm">
 
                     <a href="#" class="cause-link d-block">
@@ -181,12 +304,12 @@
                     </a>
 
                     <div class="px-3 pt-3 border-top-0 border border shadow-sm">
-                      <div class="badge-danger py-1 small px-2 rounded mb-3 d-inline-block" class="badge School">School
+                      <div class="badge-danger py-1 small px-2 rounded mb-3 d-inline-block" class="badge School">Clothes
                       </div>
 
                       <h3 class="mb-4"><a href="#">donation request 1</a></h3>
                       <div class="border-top border-light border-bottom py-2 d-flex">
-                        <div></div>
+                        <div>Male</div>
                         <div class="ml-auto"><strong class="text-primary"></strong></div>
                       </div>
 
@@ -215,11 +338,11 @@
                     </a>
 
                     <div class="px-3 pt-3 border-top-0 border border shadow-sm">
-                      <div class="badge-primary py-1 small px-2 rounded mb-3 d-inline-block" class=badge Health>Health
+                      <div class="badge-primary py-1 small px-2 rounded mb-3 d-inline-block" class=badge Health>clothes
                       </div>
                       <h3 class="mb-4"><a href="#">donation request 2</a></h3>
                       <div class="border-top border-light border-bottom py-2 d-flex">
-                        <div></div>
+                        <div>Female</div>
                         <div class="ml-auto"><strong class="text-primary"></strong></div>
                       </div>
 
@@ -250,10 +373,10 @@
 
                     <div class="px-3 pt-3 border-top-0 border border ">
                       <div class="badge-warning py-1 small px-2 rounded mb-3 d-inline-block" class="badge Livelihood">
-                        Livelihood</div>
+                        Clothes</div>
                       <h3 class="mb-4"><a href="#">donation request 3</a></h3>
                       <div class="border-top border-light border-bottom py-2 d-flex">
-                        <div></div>
+                        <div>Male</div>
                         <div class="ml-auto"><strong class="text-primary"></strong></div>
                       </div>
 
@@ -284,11 +407,11 @@
                     </a>
 
                     <div class="px-3 pt-3 border-top-0 border border shadow-sm">
-                      <div class="badge-danger py-1 small px-2 rounded mb-3 d-inline-block" class="badge School">School
+                      <div class="badge-danger py-1 small px-2 rounded mb-3 d-inline-block" class="badge School">Clothes
                       </div>
                       <h3 class="mb-4"><a href="#">donation request 1</a></h3>
                       <div class="border-top border-light border-bottom py-2 d-flex">
-                        <div></div>
+                        <div>Male</div>
                         <div class="ml-auto"><strong class="text-primary"></strong></div>
                       </div>
 
@@ -318,10 +441,10 @@
 
                     <div class="px-3 pt-3 border-top-0 border border shadow-sm">
                       <div class="badge-primary py-1 small px-2 rounded mb-3 d-inline-block" class="" badge Health>
-                        Health</div>
+                        Clothes</div>
                       <h3 class="mb-4"><a href="#">Alias Odit Ipsam Quas Unde Obcaecati</a></h3>
                       <div class="border-top border-light border-bottom py-2 d-flex">
-                        <div></div>
+                        <div>Female</div>
                         <div class="ml-auto"><strong class="text-primary"></strong></div>
                       </div>
 
@@ -352,10 +475,10 @@
 
                     <div class="px-3 pt-3 border-top-0 border border ">
                       <div class="badge-warning py-1 small px-2 rounded mb-3 d-inline-block" class="badge livelihood">
-                        Livelihood</div>
+                        Clothes</div>
                       <h3 class="mb-4"><a href="#">Alias Odit Ipsam Quas Unde Obcaecati</a></h3>
                       <div class="border-top border-light border-bottom py-2 d-flex">
-                        <div></div>
+                        <div>Female</div>
                         <div class="ml-auto"><strong class="text-primary"></strong></div>
                       </div>
 
@@ -367,7 +490,7 @@
                       </div>
                     </div>
 
-                  </div>
+                  </div> -->
 
                 </div>
 
@@ -381,7 +504,7 @@
 
 
               </div>
-            </div>
+            
         </ul>
       </div>
 
