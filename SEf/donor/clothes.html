@@ -132,31 +132,31 @@
                     <div class="card-body">
                     <form>
                       <label class="form-check">
-                        <input class="form-check-input" type="checkbox" value="">
+                        <input class="form-check-input" type="checkbox" value=""onclick="addFilter({type_cloth:'t-shirt'});populateDiv('t-shirt')">
                         <span class="form-check-label">
                           t-shirt
                         </span>
                       </label> <!-- form-check.// -->
                       <label class="form-check">
-                        <input class="form-check-input" type="checkbox" value="">
+                        <input class="form-check-input" type="checkbox" value=""onclick="addFilter({type_cloth:'shirt'});populateDiv('shirt')">
                         <span class="form-check-label">
                           shirt
                         </span>
                       </label>  <!-- form-check.// -->
                       <label class="form-check">
-                        <input class="form-check-input" type="checkbox" value="">
+                        <input class="form-check-input" type="checkbox" value=""onclick="addFilter({type_cloth:'hoodie'});populateDiv('hoodie')">
                         <span class="form-check-label">
                           hoodie
                         </span>
                       </label>  <!-- form-check.// -->
                       <label class="form-check">
-                        <input class="form-check-input" type="checkbox" value="">
+                        <input class="form-check-input" type="checkbox" value=""onclick="addFilter({type_cloth:'pullover'});populateDiv('pullover')">
                         <span class="form-check-label">
                           Pullover
                         </span>
                       </label>
                       <label class="form-check">
-                        <input class="form-check-input" type="checkbox" value="">
+                        <input class="form-check-input" type="checkbox" value=""onclick="addFilter({type_cloth:'pants'});populateDiv('pants')">
                         <span class="form-check-label">
                           Pants
                         </span>
@@ -180,19 +180,19 @@
                   <div class="filter-content">
                     <div class="card-body">
                     <label class="form-check">
-                      <input class="form-check-input" type="radio" name="exampleRadio" value="" onclick="addFilter({gender:'male'})">
+                      <input class="form-check-input" type="radio" name="exampleRadio" value="" onclick="addFilter({gender:'male'});populateDiv('male')">
                       <span class="form-check-label">
                         Male
                       </span>
                     </label>
                     <label class="form-check">
-                      <input class="form-check-input" type="radio" name="exampleRadio" value="" onclick="populateDiv({gender:'female'})">
+                      <input class="form-check-input" type="radio" name="exampleRadio" value="" onclick="addFilter({gender:'female'});populateDiv('female')">
                       <span class="form-check-label">
                         Female
                       </span>
                     </label>
                     <label class="form-check">
-                      <input class="form-check-input" type="radio" name="exampleRadio" value="">
+                      <input class="form-check-input" type="radio" name="exampleRadio" value=""onclick="populateDiv()"> 
                       <span class="form-check-label"> 
                         Both
                       </span>
@@ -219,15 +219,15 @@
                   <div class="filter-content">
                     <div class="card-body">
                       <label class="btn btn-danger">
-                        <input class="" type="checkbox" name="myradio" value="">
+                        <input class="" type="checkbox" name="myradio" value=""onclick="addFilter({season:'summer'});populateDiv('summer')">
                         <span class="form-check-label">Summer</span>
                       </label>
                       <label class="btn btn-success">
-                        <input class="" type="checkbox" name="myradio" value="">
+                        <input class="" type="checkbox" name="myradio" value=""onclick="addFilter({season:'winter'});populateDiv('winter')">
                         <span class="form-check-label">Winter</span>
                       </label>
                       <label class="btn btn-primary">
-                        <input class="" type="checkbox" name="myradio" value="">
+                        <input class="" type="checkbox" name="myradio" value=""onclick="addFilter({season:'Spring'});populateDiv('spring')">
                         <span class="form-check-label">Spring</span>
                       </label>
                     </div> <!-- card-body.// -->
@@ -606,7 +606,7 @@
   <script src="js/aos.js"></script>
 
   <script src="js/main.js"></script>
-
+  <script src="js/clothes_filt.js"></script>
 
 
 </body>
