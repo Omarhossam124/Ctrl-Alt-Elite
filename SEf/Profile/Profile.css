@@ -1,7 +1,7 @@
 /* Center the profile picture */
 
 body {
-    background-color: #F1FBF3; /* Light green color */
+    background-color: #FFF;
 }
 
 .img-fluid {
@@ -53,7 +53,7 @@ body {
     margin: 0 auto;
     padding: 5px 20px; /* Adjust padding */
     font-size: 16px; /* Adjust font size */
-    background-color: #42CE64; /* Blue color for button */
+    background-color: #00a651; /* Blue color for button */
     color: #fff; /* White text color */
     border: none;
     border-radius: 5px;
@@ -71,7 +71,7 @@ body {
     margin: 0 auto;
     padding: 5px 20px; /* Adjust padding */
     font-size: 16px; /* Adjust font size */
-    background-color: #42CE64; /* Blue color for button */
+    background-color: #00a651; /* Blue color for button */
     color: #fff; /* White text color */
     border: none;
     border-radius: 5px;
@@ -200,7 +200,7 @@ body {
     display: inline-block;
     padding: 5px 10px;
     font-size: 14px;
-    background-color: #8EE1E0;
+    background-color: #167aaf;
     color: #000;
     border: none;
     border-radius: 5px;
@@ -211,7 +211,7 @@ body {
 
 /* Change background color on hover */
 .edit-picture-button:hover {
-    background-color: #0056b3;
+    background-color: #00a6ff;
 }
 
 /* Position Edit Picture Button */

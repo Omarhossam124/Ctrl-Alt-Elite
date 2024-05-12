@@ -102,9 +102,9 @@
 
             <div class="form-group radio-group">
                 <span>Register as a:</span>
-                <input type="radio" id="donor" name="usertype" value="donor">
+                <input type="radio" id="donor" name="usertype" value="donor" onchange="saveUserType()">
                 <label for="donor">Donor</label>
-                <input type="radio" id="organization" name="usertype" value="organization">
+                <input type="radio" id="organization" name="usertype" value="organization" onchange="saveUserType()">
                 <label for="organization">Organization</label>
             </div>
             

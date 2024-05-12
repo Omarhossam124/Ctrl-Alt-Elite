@@ -206,3 +206,14 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+// Function to save user type to localStorage
+function saveUserType() {
+    const userType = document.querySelector('input[name="usertype"]:checked').value;
+    localStorage.setItem('userType', userType);
+}
+
+// Event listener for radio button change
+document.querySelectorAll('input[name="usertype"]').forEach((radio) => {
+    radio.addEventListener('change', saveUserType);
+});
